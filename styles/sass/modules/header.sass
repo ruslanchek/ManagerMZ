@@ -1,0 +1,87 @@
+$header-height: 55px
+$color-aside-bg: #2A313F
+$color-aside-link-color: #999CA3
+
+body
+	font-size: 14px
+
+.aside
+	position: absolute
+	top: 0
+	left: 0
+	width: 220px
+	height: 100vh
+	z-index: 1
+	background-color: $color-aside-bg
+	box-shadow: 0 -10px 10px rgba(0, 0, 0, .25)
+
+	.top
+		height: $header-height
+		background: #fff
+
+		.logo
+			display: block
+			height: $header-height
+			position: relative
+
+			&:before
+				background: no-repeat url(../images/logo.svg)
+				width: 33px
+				height: 30px
+				content: ''
+				position: absolute
+				display: block
+				top: 50%
+				left: 25px
+				margin-top: -15px
+
+.nav-main
+	.title
+		color: #717480
+		font-size: .65rem
+		height: 45px
+		line-height: 45px
+		padding: 0 25px
+		text-transform: uppercase
+		font-weight: bold
+
+	a
+		display: block
+		height: 45px
+		line-height: 45px
+		transition: .2
+		padding: 0 25px
+		color: $color-aside-link-color
+		position: relative
+		transition: .2s
+
+		&:hover
+			background-color: rgba(255, 255, 255, .035)
+
+		&.active
+			background-color: #3B3F4E
+			color: #FBFBFF
+
+		i
+			margin: 0 15px 0 0
+			position: relative
+			bottom: -.035rem
+			font-size: 1.05rem
+			display: inline-block
+			width: 1em
+			text-align: center
+
+		.new
+			display: block
+			min-width: 2em
+			height: 1.4em
+			line-height: 1.6em
+			border-radius: 1em
+			font-size: .92em
+			color: #fff
+			position: absolute
+			right: 25px
+			top: 50%
+			margin: -.7em 0 0 0
+			background-color: $color-heat-light
+			text-align: center
