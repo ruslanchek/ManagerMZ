@@ -1,6 +1,8 @@
 header.top
 	height: $header-height
 	background: #fff
+	box-shadow: 0 1px 0 rgba(0, 0, 0, .075)
+	position: relative
 
 .app > .aside
 	header.top
@@ -10,21 +12,27 @@ header.top
 			line-height: $header-height
 			position: relative
 			box-sizing: border-box
-			padding: 0 0 0 $nav-main-left-space
-			color: $color-base-text
+			padding: 0 0 0 25px
+			color: $color-logo
 			font-weight: bold
-			font-size: 1.2em
+			font-size: 1.75em
+			transition: .2s
+			font-weight: 200
+
+			&:hover
+				background: rgba(0, 0, 0, .025)
 
 			&:before
 				background: no-repeat url(../images/logo.svg)
-				width: 33px
-				height: 30px
+				width: 27px
+				height: 26px
 				content: ''
 				position: absolute
 				display: block
 				top: 50%
-				left: 25px
-				margin-top: -15px
+				right: 26px
+				margin-top: -9px
 
 .app > .main
 	header.top
+		background-color: #FFFEFF

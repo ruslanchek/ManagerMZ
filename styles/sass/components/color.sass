@@ -170,3 +170,84 @@
 
 .bg-white
 	+bg(#fff)
+
+
+@mixin border($color)
+	&:not(.wireframe)
+		border-color: $color !important
+
+.border-heat-light
+	+border($color-heat-light)
+
+.border-heat-dark
+	+border($color-heat-dark)
+
+.border-warm-light
+	+border($color-warm-light)
+
+.border-warm-dark
+	+border($color-warm-dark)
+
+.border-soft-light
+	+border($color-soft-light)
+
+.border-soft-dark
+	+border($color-soft-dark)
+
+.border-neutral-light
+	+border($color-neutral-light)
+
+.border-neutral-dark
+	+border($color-neutral-dark)
+
+.border-cold-light
+	+border($color-cold-light)
+
+.border-cold-dark
+	+border($color-cold-dark)
+
+.border-mid-light
+	+border($color-mid-light)
+
+.border-mid-dark
+	+border($color-mid-dark)
+
+.border-myst-light
+	+border($color-myst-light)
+
+.border-myst-dark
+	+border($color-myst-dark)
+
+.border-mix-light
+	+border($color-mix-light)
+
+.border-mix-dark
+	+border($color-mix-dark)
+
+.border-light-gray-light
+	+border($color-light-gray-light)
+
+.border-light-gray-dark
+	+border($color-light-gray-dark)
+
+.border-medium-gray-light
+	+border($color-medium-gray-light)
+
+.border-medium-gray-dark
+	+border($color-medium-gray-dark)
+
+.border-dark-gray-light
+	+border($color-dark-gray-light)
+
+.border-dark-gray-dark
+	+border($color-dark-gray-dark)
+
+.border-black-light
+	+border($color-black-light)
+
+.border-black-dark
+	+border($color-black-dark)
+
+.border-white
+	+border(#fff)
+

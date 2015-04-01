@@ -55,15 +55,6 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/styles\/css\/modules\/main.css": {
-		"fileType": 16,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/styles\/css\/modules\/main.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/styles\/css\/screen.css": {
 		"fileType": 16,
 		"ignore": 1,
@@ -985,6 +976,22 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/styles\/sass\/modules\/app.sass": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 2,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/styles\/sass\/modules\/app.sass",
+		"outputAbbreviatedPath": "\/styles\/css\/app.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": false
+		},
 	"\/styles\/sass\/modules\/aside.sass": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -1081,6 +1088,22 @@
 		"shouldRunBless": 0,
 		"useLibsass": false
 		},
+	"\/styles\/sass\/modules\/section-header.sass": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 2,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/styles\/sass\/modules\/section-header.sass",
+		"outputAbbreviatedPath": "\/styles\/css\/section-header.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": false
+		},
 	"\/styles\/sass\/screen.sass": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -1100,7 +1123,7 @@
 	},
 "hooks": [
 	],
-"lastSavedByUser": "Ruslan Shashkov",
+"lastSavedByUser": "Ruslan",
 "manualImportLinks": {
 	},
 "projectAttributes": {
