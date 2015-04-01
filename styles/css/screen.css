@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url(http://fonts.googleapis.com/css?family=Asap:400,700,400italic,700italic);
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -1846,7 +1846,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     outline: none; }
 
 body {
-  font-family: "Asap", sans-serif;
+  font-family: "PT Sans", sans-serif;
   text-size-adjust: 100%;
   color: #434a53;
   line-height: 1.5em;
@@ -4756,7 +4756,7 @@ textarea,
   outline: none;
   display: block;
   width: 100%;
-  font-family: "Asap", sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-size: 16px;
   box-sizing: border-box;
   padding: 0.6em 1.5ex;
@@ -4921,7 +4921,7 @@ input[type="radio"] {
     outline: none;
     -webkit-appearance: none;
     color: #434a53;
-    font-family: "Asap", sans-serif;
+    font-family: "PT Sans", sans-serif;
     font-size: 16px; }
 
 .alert {
@@ -4955,59 +4955,77 @@ input[type="radio"] {
     opacity: 0.75; }
 
 body {
-  font-size: 14px; }
+  font-size: 16px; }
 
-.aside {
+body,
+td,
+th {
+  color: #212228; }
+
+.app {
+  height: 100vh;
+  width: 100vw; }
+
+header.top {
+  height: 55px;
+  background: #fff; }
+
+.app > .aside header.top .logo {
+  display: block;
+  height: 55px;
+  line-height: 55px;
+  position: relative;
+  box-sizing: border-box;
+  padding: 0 0 0 25px;
+  color: #212228;
+  font-weight: bold;
+  font-size: 1.2em; }
+  .app > .aside header.top .logo:before {
+    background: no-repeat url(../images/logo.svg);
+    width: 33px;
+    height: 30px;
+    content: "";
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 25px;
+    margin-top: -15px; }
+
+.app > .aside {
   position: absolute;
   top: 0;
   left: 0;
   width: 220px;
   height: 100vh;
+  overflow: hidden;
   z-index: 1;
   background-color: #2A313F;
   box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.25); }
-  .aside .top {
-    height: 55px;
-    background: #fff; }
-    .aside .top .logo {
-      display: block;
-      height: 55px;
-      position: relative; }
-      .aside .top .logo:before {
-        background: no-repeat url(../images/logo.svg);
-        width: 33px;
-        height: 30px;
-        content: "";
-        position: absolute;
-        display: block;
-        top: 50%;
-        left: 25px;
-        margin-top: -15px; }
 
 .nav-main .title {
-  color: #717480;
+  color: #71757F;
   font-size: 0.65rem;
-  height: 45px;
-  line-height: 45px;
+  height: 46px;
+  line-height: 46px;
   padding: 0 25px;
   text-transform: uppercase;
   font-weight: bold; }
 .nav-main a {
   display: block;
-  height: 45px;
-  line-height: 45px;
+  height: 46px;
+  line-height: 46px;
   transition: 0.2;
   padding: 0 25px;
-  color: #999CA3;
+  color: #A7ABB0;
   position: relative;
   transition: 0.2s; }
   .nav-main a:hover {
     background-color: rgba(255, 255, 255, 0.035); }
   .nav-main a.active {
-    background-color: #3B3F4E;
+    background-color: #3B3F4D;
     color: #FBFBFF; }
   .nav-main a i {
-    margin: 0 15px 0 0;
+    margin: 0 12px 0 0;
     position: relative;
     bottom: -0.035rem;
     font-size: 1.05rem;

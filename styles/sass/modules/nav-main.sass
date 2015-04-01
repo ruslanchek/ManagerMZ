@@ -1,0 +1,50 @@
+.nav-main
+	.title
+		color: $color-aside-title
+		font-size: .65rem
+		height: 46px
+		line-height: 46px
+		padding: 0 25px
+		text-transform: uppercase
+		font-weight: bold
+
+	a
+		display: block
+		height: 46px
+		line-height: 46px
+		transition: .2
+		padding: 0 25px
+		color: $color-aside-link
+		position: relative
+		transition: .2s
+
+		&:hover
+			background-color: rgba(255, 255, 255, .035)
+
+		&.active
+			background-color: $color-aside-bg-highlight
+			color: $color-aside-text-highlight
+
+		i
+			margin: 0 12px 0 0
+			position: relative
+			bottom: -.035rem
+			font-size: 1.05rem
+			display: inline-block
+			width: 1em
+			text-align: center
+
+		.new
+			display: block
+			min-width: 2em
+			height: 1.4em
+			line-height: 1.6em
+			border-radius: 1em
+			font-size: .92em
+			color: #fff
+			position: absolute
+			right: 25px
+			top: 50%
+			margin: -.7em 0 0 0
+			background-color: $color-heat-light
+			text-align: center
