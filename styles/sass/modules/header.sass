@@ -1,0 +1,30 @@
+header.top
+	height: $header-height
+	background: #fff
+
+.app > .aside
+	header.top
+		.logo
+			display: block
+			height: $header-height
+			line-height: $header-height
+			position: relative
+			box-sizing: border-box
+			padding: 0 0 0 $nav-main-left-space
+			color: $color-base-text
+			font-weight: bold
+			font-size: 1.2em
+
+			&:before
+				background: no-repeat url(../images/logo.svg)
+				width: 33px
+				height: 30px
+				content: ''
+				position: absolute
+				display: block
+				top: 50%
+				left: 25px
+				margin-top: -15px
+
+.app > .main
+	header.top
