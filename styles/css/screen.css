@@ -5031,26 +5031,42 @@ input[type="radio"] {
 
 body {
   font-size: 14px;
-  line-height: 1.3em; }
+  line-height: 1.3em;
+  font-weight: 400; }
 
 body,
 td,
 th {
-  color: #212228; }
+  color: #45464A; }
 
 input,
 textarea {
-  color: #212228; }
+  color: #45464A; }
+
+.button {
+  color: #45464A; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600; }
+  h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
+    font-weight: 200; }
 
 .app {
   height: 100vh;
-  width: 100vw; }
+  width: 100vw;
+  min-width: 1000px; }
 
 header.top {
   height: 55px;
   background: #fff;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.075);
   position: relative; }
+
+#user-button {
+  width: 25%; }
+
+#company-button {
+  width: 30%; }
 
 .app > .aside header.top .logo {
   display: block;
@@ -5079,11 +5095,43 @@ header.top {
 
 .app > .main header.top {
   background-color: #FFFEFF; }
+  .app > .main header.top .button {
+    background-color: transparent;
+    float: left;
+    color: #45464A;
+    text-align: left;
+    height: 55px;
+    min-width: 55px;
+    line-height: 55px;
+    border-radius: 0;
+    position: relative;
+    border-right: 1px solid #eee;
+    padding: 0 30px 0 30px; }
+    .app > .main header.top .button:hover {
+      background: rgba(0, 0, 0, 0.025); }
+    .app > .main header.top .button:active {
+      border-right-width: 2px; }
+    .app > .main header.top .button .icon-pre {
+      margin-right: 1ex;
+      font-size: 15px; }
+    .app > .main header.top .button.dropdown {
+      padding-right: 65px; }
+      .app > .main header.top .button.dropdown:after {
+        font: normal normal normal 14px/1 FontAwesome;
+        content: "";
+        position: absolute;
+        top: 50%;
+        font-size: 22px;
+        margin-top: -12px;
+        right: 30px; }
 
 .search {
-  width: 40%;
+  width: 35%;
   height: 55px;
-  position: relative; }
+  position: relative;
+  float: left;
+  border-right: 1px solid #eee;
+  box-sizing: border-box; }
   .search label {
     position: absolute;
     top: 50%;
@@ -5097,7 +5145,8 @@ header.top {
     background: none;
     height: 55px;
     padding: 0 55px;
-    border-radius: 0; }
+    border-radius: 0;
+    transition: 0.4s; }
     .search input:hover {
       background-color: rgba(0, 0, 0, 0.025); }
     .search input:focus {
@@ -5130,15 +5179,13 @@ header.top {
   font-weight: 600; }
 .nav-main a {
   display: block;
-  font-weight: 600;
   height: 46px;
   line-height: 46px;
   transition: 0.2;
   padding: 0 25px;
   color: #A7ABB0;
   position: relative;
-  transition: 0.2s;
-  font-weight: 200; }
+  transition: 0.2s; }
   .nav-main a:hover {
     background-color: rgba(255, 255, 255, 0.035); }
   .nav-main a:active {
@@ -5171,21 +5218,17 @@ header.top {
     border-color: #fc6d58;
     text-align: center;
     line-height: 1.7em;
-    font-weight: 600; }
+    font-weight: 400; }
 
 .main {
   width: 100vw;
   height: 100vh;
   margin: 0 !important;
   box-sizing: border-box;
-  padding-left: 220px; }
+  padding-left: 220px;
+  min-width: 780px; }
 
 .section-header {
   padding: 30px 15% 30px 30px; }
-  .section-header h1 {
-    font-weight: 200; }
-    .section-header h1 span {
-      font-weight: normal;
-      font-weight: 100; }
   .section-header.filled {
     color: #fff; }

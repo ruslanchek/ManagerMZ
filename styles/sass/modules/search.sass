@@ -2,6 +2,9 @@
 	width: $width-header-search
 	height: $header-height
 	position: relative
+	float: left
+	border-right: 1px solid #eee
+	box-sizing: border-box
 
 	label
 		position: absolute
@@ -18,6 +21,7 @@
 		height: $header-height
 		padding: 0 $space-section + 25
 		border-radius: 0
+		transition: .4s
 
 		&:hover
 			background-color: $color-header-hover
