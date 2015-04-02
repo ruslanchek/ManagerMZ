@@ -1,5 +1,55 @@
 .section-header
-	padding: $space-section 15% $space-section $space-section
+	padding: 20px 15% 85px $space-section
+	position: relative
+	overflow: hidden
+
+	.title
+		margin: 0 0 10px -2px
+
+	.subtitle
+		font-weight: 100
+		opacity: .75
+
+	.chevron
+		position: absolute
+		height: 200px
+		width: 200px
+		line-height: 200px
+		color: #fff
+		opacity: .15
+		right: $space-section
+
+		.fa
+			font-size: 200px
 
 	&.filled
 		color: #fff
+
+.section-actions
+	+clearfix
+
+	position: absolute
+	bottom: 0
+	left: $space-section
+	height: 50px
+
+	.button
+		display: block
+		font-weight: 200
+		height: 50px
+		line-height: 50px
+		float: left
+		border-radius: 0
+		background-color: rgba(255, 255, 255, .15)
+		color: #fff
+		margin-right: 2px
+		min-width: 0
+		padding-right: 26px
+
+		&:after,
+		&:before
+			border-radius: 0
+
+		&.accent
+			background-color: rgba(255, 255, 255, .3)
+			font-weight: 600

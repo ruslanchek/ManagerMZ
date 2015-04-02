@@ -1850,7 +1850,7 @@ body {
   text-size-adjust: 100%;
   color: #434a53;
   line-height: 1.5em;
-  font-size: 16px;
+  font-size: 14px;
   min-width: 1000px; }
   @media (min-width: 0) and (max-width: 569px) {
     body {
@@ -4224,7 +4224,7 @@ html, body {
   box-sizing: border-box;
   color: #656d77;
   text-align: center;
-  font-size: 16px;
+  font-size: 14px;
   cursor: pointer;
   white-space: nowrap;
   overflow: hidden;
@@ -4832,7 +4832,7 @@ textarea,
   display: block;
   width: 100%;
   font-family: "Open Sans", sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   box-sizing: border-box;
   padding: 0.6em 1.5ex;
   border: 1px solid #d7dade;
@@ -4997,7 +4997,7 @@ input[type="radio"] {
     -webkit-appearance: none;
     color: #434a53;
     font-family: "Open Sans", sans-serif;
-    font-size: 16px; }
+    font-size: 14px; }
 
 .alert {
   background-color: #e6e9ed;
@@ -5041,15 +5041,23 @@ th {
 
 input,
 textarea {
-  color: #45464A; }
+  color: #45464A;
+  font-size: 14px; }
 
 .button {
-  color: #45464A; }
+  color: #45464A;
+  font-size: 14px; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 600; }
+  font-weight: 200; }
   h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
-    font-weight: 200; }
+    opacity: 0.8; }
+
+h1 {
+  font-size: 40px; }
+
+.fa {
+  font-size: 14px; }
 
 .app {
   height: 100vh;
@@ -5062,11 +5070,11 @@ header.top {
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.075);
   position: relative; }
 
-#user-button {
-  width: 25%; }
-
 #company-button {
-  width: 30%; }
+  width: 33%; }
+
+#user-button {
+  width: 27%; }
 
 .app > .aside header.top .logo {
   display: block;
@@ -5094,7 +5102,19 @@ header.top {
     margin-top: -9px; }
 
 .app > .main header.top {
-  background-color: #FFFEFF; }
+  background-color: #FFFEFF;
+  padding-right: 110px; }
+  .app > .main header.top .buttons-group {
+    width: 110px;
+    position: absolute;
+    top: 0;
+    right: 0; }
+    .app > .main header.top .buttons-group .button {
+      max-width: 55px;
+      text-align: center;
+      padding: 0; }
+      .app > .main header.top .buttons-group .button .fa {
+        margin: 0; }
   .app > .main header.top .button {
     background-color: transparent;
     float: left;
@@ -5105,39 +5125,46 @@ header.top {
     line-height: 55px;
     border-radius: 0;
     position: relative;
-    border-right: 1px solid #eee;
-    padding: 0 30px 0 30px; }
+    font-size: 14px;
+    padding: 0 15px 0 20px; }
+    .app > .main header.top .button:before {
+      content: "";
+      right: 0;
+      position: absolute;
+      top: -1px;
+      height: 100%;
+      width: 1px;
+      background-color: #eee;
+      border-radius: 0; }
     .app > .main header.top .button:hover {
       background: rgba(0, 0, 0, 0.025); }
-    .app > .main header.top .button:active {
-      border-right-width: 2px; }
     .app > .main header.top .button .icon-pre {
       margin-right: 1ex;
-      font-size: 15px; }
+      font-size: 14px; }
     .app > .main header.top .button.dropdown {
-      padding-right: 65px; }
+      padding-right: 45px; }
       .app > .main header.top .button.dropdown:after {
         font: normal normal normal 14px/1 FontAwesome;
         content: "";
         position: absolute;
         top: 50%;
-        font-size: 22px;
-        margin-top: -12px;
-        right: 30px; }
+        font-size: 21px;
+        margin-top: -11px;
+        right: 20px;
+        color: #656d77; }
 
 .search {
-  width: 35%;
+  width: 40%;
   height: 55px;
   position: relative;
   float: left;
-  border-right: 1px solid #eee;
   box-sizing: border-box; }
   .search label {
     position: absolute;
     top: 50%;
     left: 30px;
     margin-top: -8px;
-    font-size: 15px;
+    font-size: 14px;
     transition: 0.4s; }
   .search input {
     display: block;
@@ -5197,7 +5224,7 @@ header.top {
     margin: 0 12px 0 0;
     position: relative;
     bottom: -0.03rem;
-    font-size: 1.05rem;
+    font-size: 14px;
     display: inline-block;
     width: 1em;
     text-align: center; }
@@ -5213,7 +5240,7 @@ header.top {
     position: absolute;
     right: 25px;
     top: 50%;
-    margin: -0.7em 0 0 0;
+    margin: -0.85em 0 0 0;
     border: 1px solid;
     border-color: #fc6d58;
     text-align: center;
@@ -5226,9 +5253,51 @@ header.top {
   margin: 0 !important;
   box-sizing: border-box;
   padding-left: 220px;
-  min-width: 780px; }
+  min-width: 1000px; }
 
 .section-header {
-  padding: 30px 15% 30px 30px; }
+  padding: 20px 15% 85px 30px;
+  position: relative;
+  overflow: hidden; }
+  .section-header .title {
+    margin: 0 0 10px -2px; }
+  .section-header .subtitle {
+    font-weight: 100;
+    opacity: 0.75; }
+  .section-header .chevron {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    line-height: 200px;
+    color: #fff;
+    opacity: 0.15;
+    right: 30px; }
+    .section-header .chevron .fa {
+      font-size: 200px; }
   .section-header.filled {
     color: #fff; }
+
+.section-actions {
+  overflow: hidden;
+  *zoom: 1;
+  position: absolute;
+  bottom: 0;
+  left: 30px;
+  height: 50px; }
+  .section-actions .button {
+    display: block;
+    font-weight: 200;
+    height: 50px;
+    line-height: 50px;
+    float: left;
+    border-radius: 0;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    margin-right: 2px;
+    min-width: 0;
+    padding-right: 26px; }
+    .section-actions .button:after, .section-actions .button:before {
+      border-radius: 0; }
+    .section-actions .button.accent {
+      background-color: rgba(255, 255, 255, 0.3);
+      font-weight: 600; }

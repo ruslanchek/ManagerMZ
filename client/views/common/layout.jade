@@ -54,17 +54,38 @@ body
 					label.fa.fa-search
 
 				a#company-button.button.dropdown(href="#")
-					.icon-pre.fa.fa-user
+					i.icon-pre.fa.fa-rocket
 					| ООО &laquo;Онлайн Системс&raquo;
 
-				a#user-button.button(href="#")
-					.icon-pre.fa.fa-building-o
+				a#user-button.button.dropdown(href="#")
+					i.icon-pre.fa.fa-street-view
 					| rshashkov
-				
 
+				.buttons-group
+					a.button(href="#")
+						i.icon-pre.fa.fa-bars
+
+					a.button(href="#")
+						i.icon-pre.fa.fa-power-off
+				
 			section.middle
-				.section-header
-					h1 Выставленные счета
-						span.text-fade за период&nbsp;с 25 марта&nbsp;по 30 апреля 2015
+				.section-header.filled.bg-cold-dark
+					.chevron
+						i.fa.fa-share
+
+					h1.title Выставленные счета
+					.subtitle За период&nbsp;с 25 марта&nbsp;по 30 апреля 2015
+					.section-actions
+						a.button.accent(href="#")
+							.big.fa.fa-plus
+							|&nbsp;&nbsp;Создать счет
+
+						a.button(href="#")
+							i.fa.fa-calendar
+							|&nbsp;&nbsp;Выбрать период
+
+						a.button(href="#")
+							i.fa.fa-filter
+							|&nbsp;&nbsp;Фильтр
 
 			// footer.footer

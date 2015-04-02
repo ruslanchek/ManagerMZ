@@ -4,11 +4,11 @@ header.top
 	box-shadow: 0 1px 0 rgba(0, 0, 0, .075)
 	position: relative
 
-#user-button
-	width: $width-header-user
-
 #company-button
 	width: $width-header-company
+
+#user-button
+	width: $width-header-user
 
 .app > .aside
 	header.top
@@ -42,6 +42,21 @@ header.top
 .app > .main
 	header.top
 		background-color: #FFFEFF
+		padding-right: $header-height * 2
+
+		.buttons-group
+			width: $header-height * 2
+			position: absolute
+			top: 0
+			right: 0
+
+			.button
+				max-width: $header-height
+				text-align: center
+				padding: 0
+				
+				.fa
+					margin: 0
 
 		.button
 			background-color: transparent
@@ -53,27 +68,35 @@ header.top
 			line-height: $header-height
 			border-radius: 0
 			position: relative
-			border-right: 1px solid #eee
-			padding: 0 $space-section 0 $space-section
+			font-size: $base-font-size
+			padding: 0 15px 0 20px
+
+			&:before
+				content: ''
+				right: 0
+				position: absolute
+				top: -1px
+				height: 100%
+				width: 1px
+				background-color: #eee
+				border-radius: 0
 
 			&:hover
 				background: $color-header-hover
 
-			&:active
-				border-right-width: 2px
-
 			.icon-pre
 				margin-right: 1ex
-				font-size: 15px
+				font-size: $base-font-size
 
 			&.dropdown
-				padding-right: $space-section + 35
+				padding-right: 45px
 
 				&:after
 					font: normal normal normal 14px/1 FontAwesome
 					content: $fa-var-angle-down
 					position: absolute
 					top: 50%
-					font-size: 22px
-					margin-top: -12px
-					right: $space-section
+					font-size: 21px
+					margin-top: -11px
+					right: 20px
+					color: $color-ui-icons
