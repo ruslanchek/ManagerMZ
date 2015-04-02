@@ -3265,35 +3265,35 @@ h1 {
   margin-top: 1.1905em;
   font-size: 1.875em;
   margin-bottom: 0.5em;
-  line-height: 1.1em;
+  line-height: 1.3em;
   font-weight: bold; }
 
 h2 {
   font-size: 1.6em;
   margin-bottom: 0.4em;
   margin-top: 1.28905em;
-  line-height: 1.175em;
+  line-height: 1.3em;
   font-weight: bold; }
 
 h3 {
   font-size: 1.375em;
   margin-bottom: 0.4em;
   margin-top: 1.5em;
-  line-height: 1.25em;
+  line-height: 1.3em;
   font-weight: bold; }
 
 h4 {
   font-size: 1.2em;
   margin-bottom: 0.4em;
   margin-top: 1.71875em;
-  line-height: 1.35em;
+  line-height: 1.3em;
   font-weight: bold; }
 
 h5 {
   font-size: 1em;
   margin-bottom: 0.5em;
   margin-top: 2.0625em;
-  line-height: 1.4em;
+  line-height: 1.3em;
   font-weight: bold; }
 
 h1:first-child,
@@ -5030,11 +5030,16 @@ input[type="radio"] {
     opacity: 0.75; }
 
 body {
-  font-size: 14px; }
+  font-size: 14px;
+  line-height: 1.3em; }
 
 body,
 td,
 th {
+  color: #212228; }
+
+input,
+textarea {
   color: #212228; }
 
 .app {
@@ -5074,6 +5079,33 @@ header.top {
 
 .app > .main header.top {
   background-color: #FFFEFF; }
+
+.search {
+  width: 40%;
+  height: 55px;
+  position: relative; }
+  .search label {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    margin-top: -8px;
+    font-size: 15px;
+    transition: 0.4s; }
+  .search input {
+    display: block;
+    border: none;
+    background: none;
+    height: 55px;
+    padding: 0 55px;
+    border-radius: 0; }
+    .search input:hover {
+      background-color: rgba(0, 0, 0, 0.025); }
+    .search input:focus {
+      padding-left: 30px;
+      box-shadow: none; }
+      .search input:focus + label {
+        left: 100%;
+        margin-left: -44px; }
 
 .app > .aside {
   position: absolute;

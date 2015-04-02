@@ -1,0 +1,31 @@
+.search
+	width: $width-header-search
+	height: $header-height
+	position: relative
+
+	label
+		position: absolute
+		top: 50%
+		left: $space-section
+		margin-top: -8px
+		font-size: 15px
+		transition: .4s
+
+	input
+		display: block
+		border: none
+		background: none
+		height: $header-height
+		padding: 0 $space-section + 25
+		border-radius: 0
+
+		&:hover
+			background-color: $color-header-hover
+		
+		&:focus
+			padding-left: $space-section
+			box-shadow: none
+
+			&+label
+				left: 100%
+				margin-left: -($space-section + 14)
