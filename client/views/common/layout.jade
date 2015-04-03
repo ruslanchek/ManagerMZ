@@ -4,48 +4,50 @@ head
 body
 	.app
 		aside.aside
-			header.top
-				a.logo(href="#") Менеджер
+			.content
+				header.top
+					a.logo(href="#") Менеджер
 
-			section.middle
-				nav.nav-main
-					span.title Документы
-					a.active(href="#")
-						i.fa.fa-share
-						|Счета
-						span.new.border-cold-dark 12
-					a(href="#")
-						i.fa.fa-reply
-						|Счета-фактуры
-						span.new.border-myst-dark 8
-					a(href="#")
-						i.fa.fa-th-list
-						|Накладные
-					a(href="#")
-						i.fa.fa-check
-						|Акты
-					a(href="#")
-						i.fa.fa-suitcase
-						|Договоры
+				section.middle
+					nav.nav-main
+						span.title Документы
+						a.active(href="#")
+							i.fa.fa-share
+							|Счета
+							span.new.border-cold-dark 12
+						a(href="#")
+							i.fa.fa-reply
+							|Счета-фактуры
+							span.new.border-myst-dark 8
+						a(href="#")
+							i.fa.fa-th-list
+							|Накладные
+						a(href="#")
+							i.fa.fa-check
+							|Акты
+						a(href="#")
+							i.fa.fa-suitcase
+							|Договоры
 
-					span.title Контент
-					a(href="#")
-						i.fa.fa-folder-open
-						|Номенклатура
-					a(href="#")
-						i.fa.fa-users
-						|Контрагенты
-					a(href="#")
-						i.fa.fa-rub
-						|Финансы
+						span.title Контент
+						a(href="#")
+							i.fa.fa-folder-open
+							|Номенклатура
+						a(href="#")
+							i.fa.fa-users
+							|Контрагенты
+						a(href="#")
+							i.fa.fa-rub
+							|Финансы
 
-					span.title Прочее
-					a(href="#")
-						i.fa.fa-envelope
-						|Уведомления
-						span.new.border-heat-dark 3
+						span.title Прочее
+						a(href="#")
+							i.fa.fa-envelope
+							|Уведомления
+							span.new.border-heat-dark 3
 
-			// footer.footer
+			footer.footer 
+				|&copy; 2015 Менеджер
 
 		main.main
 			header.top
@@ -87,5 +89,18 @@ body
 						a.button(href="#")
 							i.fa.fa-filter
 							|&nbsp;&nbsp;Фильтр
+
+				nav.section-menu
+					a(href="#") Списком
+					a.active(href="#") Файлами
+					a(href="#") Папками
+
+				.section-content
+					.docs-cards
+						.item
+							h4.title Счет №4812-1Д
+							.date От 25 марта 2015
+							.picture
+							a.link(href="#") ООО &laquo;Акванавт Красноярск на Амуре&raquo;
 
 			// footer.footer
