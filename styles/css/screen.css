@@ -5290,37 +5290,70 @@ header.top {
 .section-content {
   padding: 30px; }
 
-.docs-cards .item {
-  cursor: pointer;
-  width: 25%;
+.section-scrolling {
+  padding-top: 55px;
   box-sizing: border-box;
-  padding: 15px 20px;
-  border: 1px solid #e1e3e6;
-  transition: 0.2s;
-  border-radius: 3px; }
-  .docs-cards .item .title {
-    font-weight: 600; }
-  .docs-cards .item .date {
-    color: #aab2bc; }
-  .docs-cards .item .picture {
-    width: 100%;
-    height: 140px;
-    background: url(../images/doc.svg) no-repeat;
-    margin: 1em 0;
-    opacity: 0.8;
-    transition: 0.2s; }
-  .docs-cards .item:hover {
-    border-color: #d7d9dc; }
-    .docs-cards .item:hover .picture {
-      opacity: 1; }
+  overflow: auto;
+  height: 100vh; }
+
+.docs-cards {
+  overflow: hidden;
+  *zoom: 1;
+  margin-left: -15px; }
+  .docs-cards .item {
+    cursor: pointer;
+    width: 200px;
+    box-sizing: border-box;
+    padding: 15px 20px;
+    border: 1px solid #e1e3e6;
+    transition: 0.2s;
+    border-radius: 3px;
+    margin: 0 15px 30px;
+    float: left;
+    position: relative; }
+    .docs-cards .item:before, .docs-cards .item:after {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      content: "";
+      top: 0;
+      right: 0; }
+    .docs-cards .item .title {
+      font-weight: 600;
+      margin-bottom: 0.3em; }
+    .docs-cards .item .date {
+      color: #aab2bc;
+      font-size: 0.85em; }
+    .docs-cards .item .picture {
+      width: 100%;
+      height: 132px;
+      background: url(../images/doc.svg) no-repeat;
+      margin: 1em 0;
+      opacity: 0.8;
+      transition: 0.2s; }
+    .docs-cards .item .params {
+      font-size: 0.85em;
+      padding: 10px 0;
+      margin-left: -5px; }
+      .docs-cards .item .params div {
+        padding: 1px 5px; }
+        .docs-cards .item .params div:nth-child(odd) {
+          background: #eee; }
+    .docs-cards .item .link {
+      font-size: 0.85em;
+      color: #aab2bc; }
+    .docs-cards .item:hover {
+      border-color: #d7d9dc; }
+      .docs-cards .item:hover .picture {
+        opacity: 1; }
 
 .section-menu {
   padding: 30px 30px 0 30px; }
   .section-menu a {
     font-size: 2em;
-    color: #aab2bc;
-    margin: 0 2ex 0 0;
+    margin: 0 1.5ex 0 0;
     font-weight: 200;
+    color: #aab2bc;
     transition: 0.1s; }
     .section-menu a:hover {
       color: #9199a3; }

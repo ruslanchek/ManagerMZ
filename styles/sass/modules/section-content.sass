@@ -1,31 +1,68 @@
 .section-content
 	padding: $space-section
 
+.section-scrolling
+	padding-top: $header-height
+	box-sizing: border-box
+	overflow: auto
+	height: 100vh
+
 .docs-cards
+	+clearfix
+
+	margin-left: -15px
+
 	.item
 		cursor: pointer
-		width: 25%
+		width: 200px
 		box-sizing: border-box
 		padding: 15px 20px
 		border: 1px solid $color-light-gray-light - 20
 		transition: .2s
 		border-radius: 3px
+		margin: 0 15px 30px
+		float: left
+		position: relative
+
+		&:before,
+		&:after
+			position: absolute
+			width: 40px
+			height: 40px
+			content: ''
+			top: 0
+			right: 0
 
 		.title 
 			font-weight: 600
+			margin-bottom: .3em
 
 		.date
 			color: $color-medium-gray-dark
+			font-size: .85em
 
 		.picture
 			width: 100%
-			height: 140px
+			height: 132px
 			background: url(../images/doc.svg) no-repeat
 			margin: 1em 0
 			opacity: .8
 			transition: .2s
 
+		.params
+			font-size: .85em
+			padding: 10px 0
+			margin-left: -5px
+
+			div
+				padding: 1px 5px
+
+				&:nth-child(odd)
+					background: #eee
+
 		.link
+			font-size: .85em
+			color: $color-medium-gray-dark
 
 		&:hover 
 			border-color: $color-light-gray-light - 30
