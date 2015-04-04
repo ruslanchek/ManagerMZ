@@ -5302,9 +5302,9 @@ header.top {
   margin-left: -15px; }
   .docs-cards .item {
     cursor: pointer;
-    width: 200px;
+    width: 175px;
     box-sizing: border-box;
-    padding: 15px 20px;
+    padding: 13px 20px;
     border: 1px solid #e1e3e6;
     transition: 0.2s;
     border-radius: 3px;
@@ -5317,16 +5317,24 @@ header.top {
       height: 40px;
       content: "";
       top: 0;
-      right: 0; }
+      right: 0;
+      background: red; }
+    .docs-cards .item .subtitle {
+      color: #aab2bc;
+      font-size: 0.85em;
+      text-align: center; }
     .docs-cards .item .title {
-      font-weight: 600;
-      margin-bottom: 0.3em; }
+      font-weight: 400;
+      margin-top: 0.2em;
+      margin-bottom: 0.2em;
+      text-align: center; }
     .docs-cards .item .date {
       color: #aab2bc;
-      font-size: 0.85em; }
+      font-size: 0.85em;
+      text-align: center; }
     .docs-cards .item .picture {
       width: 100%;
-      height: 132px;
+      height: 90px;
       background: url(../images/doc.svg) no-repeat;
       margin: 1em 0;
       opacity: 0.8;
