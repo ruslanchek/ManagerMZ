@@ -1,0 +1,11 @@
+<template name="invoicesItemsTable">
+	<tr>
+		<td>Счет №{{title}}</td>
+		<td>От {{humanizeDate date}}</td>
+		<td>{{> priceConverted price}} {{> payedWord}} {{pluralize items 'позиция' 'позиции' 'позиций' true}}</td>
+		<td>{{payed}}</td>
+		<td>{{> payedWord}}</td>
+		<td>{{pluralize items 'позиция' 'позиции' 'позиций' true}}</td>
+		<td>{{> contragentLink contragent}}</td>
+	</tr>
+</template>

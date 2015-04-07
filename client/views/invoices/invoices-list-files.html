@@ -1,0 +1,16 @@
+<template name="invoicesItemsFiles">
+	<div class="item">
+		<div class="subtitle">Счет</div>
+		<div class="title">№{{title}}</div>
+		<div class="date">От {{humanizeDate date}}</div>
+		{{> priceConverted price}} {{> payedWord}}
+		{{pluralize items 'позиция' 'позиции' 'позиций' true}}
+
+		<div class="picture">
+			{{#if payed}}
+			<i class="status active fa fa-check"></i>
+			{{/if}}
+		</div>
+		<div class="link">{{> contragentLink contragent}}</div>
+	</div>
+</template>

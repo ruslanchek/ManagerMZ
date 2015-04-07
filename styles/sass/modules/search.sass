@@ -23,12 +23,14 @@
 		transition: .4s
 
 		&:hover
-			background-color: $color-header-hover
-		
+			&+label
+				color: $color-neutral-light
+
 		&:focus
 			padding-left: $space-section
 			box-shadow: none
 
 			&+label
 				left: 100%
+				color: $color-neutral-dark
 				margin-left: -($space-section + 14)

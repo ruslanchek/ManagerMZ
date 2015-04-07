@@ -5120,8 +5120,7 @@ input[type="radio"] {
 
 .alert {
   background-color: #e6e9ed;
-  padding: 0.5em 20px;
-  border-radius: 5px; }
+  padding: 15px 30px; }
   .alert.error {
     background-color: #fc6d58;
     color: #fff; }
@@ -5130,7 +5129,7 @@ input[type="radio"] {
     color: #fff; }
   .alert.attention {
     background-color: #ffcd69;
-    color: #fff; }
+    color: #aa7814; }
   .alert.invert {
     background-color: transparent;
     box-shadow: inset 0 0 0 1px #ccd1d8; }
@@ -5252,7 +5251,9 @@ header.top {
     border-radius: 0;
     position: relative;
     font-size: 14px;
-    padding: 0 15px 0 20px; }
+    padding: 0 15px 0 20px;
+    -webkit-transition: 0.4s;
+            transition: 0.4s; }
     .app > .main header.top .button:before {
       content: "";
       right: 0;
@@ -5263,7 +5264,8 @@ header.top {
       background-color: #eee;
       border-radius: 0; }
     .app > .main header.top .button:hover {
-      background: rgba(0, 0, 0, 0.025); }
+      background: transparent;
+      color: #727377; }
     .app > .main header.top .button .icon-pre {
       margin-right: 1ex;
       font-size: 14px; }
@@ -5277,7 +5279,13 @@ header.top {
         font-size: 21px;
         margin-top: -11px;
         right: 20px;
-        color: #656d77; }
+        color: #656d77;
+        -webkit-transition: 0.4s;
+                transition: 0.4s; }
+      .app > .main header.top .button.dropdown:hover:after {
+        color: #46cfb0; }
+      .app > .main header.top .button.dropdown:active:after {
+        color: #34bc9d; }
 
 .app > .aside .footer {
   height: 55px;
@@ -5312,13 +5320,14 @@ header.top {
     border-radius: 0;
     -webkit-transition: 0.4s;
             transition: 0.4s; }
-    .search input:hover {
-      background-color: rgba(0, 0, 0, 0.025); }
+    .search input:hover + label {
+      color: #46cfb0; }
     .search input:focus {
       padding-left: 30px;
       box-shadow: none; }
       .search input:focus + label {
         left: 100%;
+        color: #34bc9d;
         margin-left: -44px; }
 
 .app > .aside {
@@ -5494,12 +5503,12 @@ header.top {
         display: block;
         text-align: center;
         background-color: #fff;
-        margin: -33px 0 0 -33px;
+        margin: -23px 0 0 -23px;
         padding: 3px;
-        width: 60px;
-        height: 60px;
-        font-size: 60px;
-        border-radius: 66px;
+        width: 40px;
+        height: 40px;
+        font-size: 40px;
+        border-radius: 46px;
         color: #46cfb0;
         opacity: 0;
         -webkit-transition: 0.2s;
@@ -5520,7 +5529,7 @@ header.top {
         padding: 1px 5px; }
         .docs-cards .item .params div:nth-child(odd) {
           background: #eee; }
-    .docs-cards .item .link {
+    .docs-cards .item a {
       font-size: 0.85em;
       color: #aab2bc;
       text-align: center;

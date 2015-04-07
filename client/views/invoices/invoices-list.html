@@ -1,0 +1,27 @@
+<template name="invoicesList">
+	{{> invoicesSectionHeader}}
+
+	<div class="section-content">
+		{{> invoicesItemsViewModeAndSorting}}
+
+		<div class="docs-cards">
+			{{#if eq viewMode 1}}
+				<table>
+					{{#each invoices}}
+						{{> invoicesItemsTable this}}
+					{{/each}}
+				</table>
+			{{/if}}
+
+			{{#if eq viewMode 2}}
+				{{#masonryContainer columnWidth=175 transitionDuration="0.2s" gutter=25 id="MasonryContainer" }}
+					{{#each invoices}}
+						{{#masonryElement "MasonryContainer"}}
+							{{> invoicesItemsFiles this}}
+						{{/masonryElement}}
+					{{/each}}
+				{{/masonryContainer}}
+			{{/if}}
+		</div>
+	</div>
+</template>

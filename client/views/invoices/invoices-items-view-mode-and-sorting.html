@@ -1,9 +1,10 @@
-<template name="itemsViewModeAndSorting">
+<template name="invoicesItemsViewModeAndSorting">
 	<div class="grid">
 		<div class="col-15">
-			<nav class="section-menu"><a href="#">Списком</a>
-				<a href="#" class="active">Файлами</a>
-				<a href="#">Папками</a>
+			<nav class="section-menu">
+				<a href="#" data-mode="1" class="{{isInvoicesSectionMenuSelected 1}}">Списком</a>
+				<a href="#" data-mode="2" class="{{isInvoicesSectionMenuSelected 2}}">Файлами</a>
+				<a href="#" data-mode="3" class="{{isInvoicesSectionMenuSelected 3}}">Папками</a>
 			</nav>
 		</div>
 		<div class="col-9">
@@ -23,3 +24,4 @@
 		</div>
 	</div>
 </template>
+

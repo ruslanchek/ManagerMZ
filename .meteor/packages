@@ -10,3 +10,7 @@ insecure
 mquandalle:jade
 robodo:masonrify
 iron:router
+dburles:mongo-collection-instances
+momentjs:moment
+numeral:numeral
+mrt:reactive-attributes
