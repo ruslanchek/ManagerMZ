@@ -42,7 +42,13 @@ header.top
 .app > .main
 	header.top
 		background-color: #FFFEFF
-		padding-right: $header-height * 2
+		position: fixed
+		top: 0
+		left: 0
+		padding: 0 $header-height * 2 0 $width-aside
+		width: 100vw
+		box-sizing: border-box
+		z-index: 3
 
 		.buttons-group
 			width: $header-height * 2
