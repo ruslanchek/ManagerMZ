@@ -15,12 +15,11 @@ header.top
 		.logo
 			display: block
 			height: $header-height
-			line-height: $header-height
+			line-height: $header-height - 3
 			position: relative
 			box-sizing: border-box
 			padding: 0 0 0 25px
 			color: $color-logo
-			font-weight: bold
 			font-size: 1.75em
 			transition: .2s
 			font-weight: 200
@@ -37,7 +36,7 @@ header.top
 				display: block
 				top: 50%
 				right: 26px
-				margin-top: -9px
+				margin-top: -11px
 
 .app > .main
 	header.top
@@ -60,6 +59,12 @@ header.top
 				max-width: $header-height
 				text-align: center
 				padding: 0
+
+				&:hover
+					color: $color-neutral-light
+
+				&:active
+					color: $color-neutral-dark
 				
 				.fa
 					margin: 0
@@ -76,7 +81,7 @@ header.top
 			position: relative
 			font-size: $base-font-size
 			padding: 0 15px 0 20px
-			transition: .4s
+			transition: .15s
 
 			&:before
 				content: ''

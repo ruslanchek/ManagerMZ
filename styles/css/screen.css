@@ -5197,12 +5197,11 @@ header.top {
 .app > .aside header.top .logo {
   display: block;
   height: 55px;
-  line-height: 55px;
+  line-height: 52px;
   position: relative;
   box-sizing: border-box;
   padding: 0 0 0 25px;
   color: #212228;
-  font-weight: bold;
   font-size: 1.75em;
   -webkit-transition: 0.2s;
           transition: 0.2s;
@@ -5218,7 +5217,7 @@ header.top {
     display: block;
     top: 50%;
     right: 26px;
-    margin-top: -9px; }
+    margin-top: -11px; }
 
 .app > .main header.top {
   background-color: #FFFEFF;
@@ -5238,6 +5237,10 @@ header.top {
       max-width: 55px;
       text-align: center;
       padding: 0; }
+      .app > .main header.top .buttons-group .button:hover {
+        color: #46cfb0; }
+      .app > .main header.top .buttons-group .button:active {
+        color: #34bc9d; }
       .app > .main header.top .buttons-group .button .fa {
         margin: 0; }
   .app > .main header.top .button {
@@ -5252,8 +5255,8 @@ header.top {
     position: relative;
     font-size: 14px;
     padding: 0 15px 0 20px;
-    -webkit-transition: 0.4s;
-            transition: 0.4s; }
+    -webkit-transition: 0.15s;
+            transition: 0.15s; }
     .app > .main header.top .button:before {
       content: "";
       right: 0;

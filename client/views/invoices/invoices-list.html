@@ -7,7 +7,7 @@
 		<div class="docs-cards">
 			{{#if eq viewMode 1}}
 				<table>
-					{{#each invoices}}
+					{{#each items}}
 						{{> invoicesItemsTable this}}
 					{{/each}}
 				</table>
@@ -15,7 +15,7 @@
 
 			{{#if eq viewMode 2}}
 				{{#masonryContainer columnWidth=175 transitionDuration="0.2s" gutter=25 id="MasonryContainer" }}
-					{{#each invoices}}
+					{{#each items}}
 						{{#masonryElement "MasonryContainer"}}
 							{{> invoicesItemsFiles this}}
 						{{/masonryElement}}

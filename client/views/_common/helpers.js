@@ -45,7 +45,7 @@ Handlebars.registerHelper('humanizeDateTime', function(date) {
 
 
 Handlebars.registerHelper('getCompanyType', function(id) {
-	var companyType = getStaticById(id, companyTypes);
+	var companyType = App.staticData.getStaticById(id, 'companyTypes');
 
 	if(companyType){
 		return companyType.name;

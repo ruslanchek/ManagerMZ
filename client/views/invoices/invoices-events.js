@@ -5,6 +5,6 @@ Template.invoicesItemsViewModeAndSorting.events({
         var $target = $(e.target),
             data = $target.data();
 
-        setUserParam('invoicesViewMode', data.mode);
+        App.userData.setUserParam('invoicesViewMode', data.mode);
     }
 });

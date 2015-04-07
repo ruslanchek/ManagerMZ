@@ -1,5 +1,15 @@
 <template name="asideNav">
 	<nav class="nav-main">
+		{{#each mainMenu}}
+			{{#if header}}
+                <span class="title">{{title}}</span>
+			{{else}}
+                <a href="{{path}}" class="{{isAsideNavItemSelected name currentSection}}">
+                    <i class="fa {{icon}}"></i> {{title}}<!--span class="new border-cold-dark">12</span-->
+                </a>
+			{{/if}}
+		{{/each}}
+
 		<span class="title">Документы</span>
 		<a href="#" class="active"><i class="fa fa-share"></i>Счета<span class="new border-cold-dark">12</span></a>
 		<a href="#"><i class="fa fa-reply"></i>Счета-фактуры<span class="new border-myst-dark">8</span></a>
