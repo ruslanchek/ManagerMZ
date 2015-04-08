@@ -1,5 +1,5 @@
-if (App.collections.Invoices.find().count() === 0) {
-    var invoices = [
+if (App.collections.Bills.find().count() === 0) {
+    var bills = [
         {
             payed: true,
             title: '1',
@@ -86,9 +86,7 @@ if (App.collections.Invoices.find().count() === 0) {
         }
     ];
 
-    for (var i = invoices.length - 1; i >= 0; i--) {
-        var o = invoices[i];
-
-        App.collections.Invoices.insert(o);
+    for (var i = bills.length - 1; i >= 0; i--) {
+        App.collections.Bills.insert(bills[i]);
     }
 }

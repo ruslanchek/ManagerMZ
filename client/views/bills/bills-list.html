@@ -1,14 +1,14 @@
-<template name="invoicesList">
-	{{> invoicesSectionHeader}}
+<template name="billsList">
+	{{> billsSectionHeader}}
 
 	<div class="section-content">
-		{{> invoicesItemsViewModeAndSorting}}
+		{{> billsItemsViewModeAndSorting}}
 
 		<div class="docs-cards">
 			{{#if eq viewMode 1}}
 				<table>
 					{{#each items}}
-						{{> invoicesItemsTable this}}
+						{{> billsItemsTable this}}
 					{{/each}}
 				</table>
 			{{/if}}
@@ -17,7 +17,7 @@
 				{{#masonryContainer columnWidth=175 transitionDuration="0.2s" gutter=25 id="MasonryContainer" }}
 					{{#each items}}
 						{{#masonryElement "MasonryContainer"}}
-							{{> invoicesItemsFiles this}}
+							{{> billsItemsFiles this}}
 						{{/masonryElement}}
 					{{/each}}
 				{{/masonryContainer}}

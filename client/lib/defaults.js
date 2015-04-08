@@ -1,1 +1,1 @@
-Session.setDefault('invoicesViewMode', 1);
+Session.setDefault('billsViewMode', 1);
