@@ -49,26 +49,6 @@ header.top
 		box-sizing: border-box
 		z-index: 3
 
-		.buttons-group
-			width: $header-height * 2
-			position: absolute
-			top: 0
-			right: 0
-
-			.button
-				max-width: $header-height
-				text-align: center
-				padding: 0
-
-				&:hover
-					color: $color-neutral-light
-
-				&:active
-					color: $color-neutral-dark
-				
-				.fa
-					margin: 0
-
 		.button
 			background-color: transparent
 			float: left
@@ -97,9 +77,22 @@ header.top
 				background: transparent
 				color: $color-base-text + 45
 
+				.icon-pre
+					color: $color-neutral-light
+
+			&:active
+				.icon-pre
+					color: $color-neutral-dark
+
 			.icon-pre
 				margin-right: 1ex
-				font-size: $base-font-size
+				font-size: 21px
+				color: $color-medium-gray-dark
+				margin-bottom: -3px
+				display: inline-block
+				position: relative
+				bottom: -2px
+				transition: .15s
 
 			&.dropdown
 				padding-right: 45px
@@ -113,7 +106,7 @@ header.top
 					margin-top: -11px
 					right: 20px
 					color: $color-ui-icons
-					transition: .4s
+					transition: .15s
 
 				&:hover
 					&:after
@@ -122,3 +115,25 @@ header.top
 				&:active
 					&:after
 						color: $color-neutral-dark
+
+		.buttons-group
+			width: $header-height * 2
+			position: absolute
+			top: 0
+			right: 0
+
+			.button
+				max-width: $header-height
+				text-align: center
+				padding: 0
+
+				&:hover
+					color: $color-neutral-light
+
+				&:active
+					color: $color-neutral-dark
+
+				.fa
+					margin: 0
+					position: relative
+					bottom: -2px

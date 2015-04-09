@@ -5228,21 +5228,6 @@ header.top {
   width: 100vw;
   box-sizing: border-box;
   z-index: 3; }
-  .app > .main header.top .buttons-group {
-    width: 110px;
-    position: absolute;
-    top: 0;
-    right: 0; }
-    .app > .main header.top .buttons-group .button {
-      max-width: 55px;
-      text-align: center;
-      padding: 0; }
-      .app > .main header.top .buttons-group .button:hover {
-        color: #46cfb0; }
-      .app > .main header.top .buttons-group .button:active {
-        color: #34bc9d; }
-      .app > .main header.top .buttons-group .button .fa {
-        margin: 0; }
   .app > .main header.top .button {
     background-color: transparent;
     float: left;
@@ -5269,9 +5254,20 @@ header.top {
     .app > .main header.top .button:hover {
       background: transparent;
       color: #727377; }
+      .app > .main header.top .button:hover .icon-pre {
+        color: #46cfb0; }
+    .app > .main header.top .button:active .icon-pre {
+      color: #34bc9d; }
     .app > .main header.top .button .icon-pre {
       margin-right: 1ex;
-      font-size: 14px; }
+      font-size: 21px;
+      color: #aab2bc;
+      margin-bottom: -3px;
+      display: inline-block;
+      position: relative;
+      bottom: -2px;
+      -webkit-transition: 0.15s;
+              transition: 0.15s; }
     .app > .main header.top .button.dropdown {
       padding-right: 45px; }
       .app > .main header.top .button.dropdown:after {
@@ -5283,12 +5279,29 @@ header.top {
         margin-top: -11px;
         right: 20px;
         color: #656d77;
-        -webkit-transition: 0.4s;
-                transition: 0.4s; }
+        -webkit-transition: 0.15s;
+                transition: 0.15s; }
       .app > .main header.top .button.dropdown:hover:after {
         color: #46cfb0; }
       .app > .main header.top .button.dropdown:active:after {
         color: #34bc9d; }
+  .app > .main header.top .buttons-group {
+    width: 110px;
+    position: absolute;
+    top: 0;
+    right: 0; }
+    .app > .main header.top .buttons-group .button {
+      max-width: 55px;
+      text-align: center;
+      padding: 0; }
+      .app > .main header.top .buttons-group .button:hover {
+        color: #46cfb0; }
+      .app > .main header.top .buttons-group .button:active {
+        color: #34bc9d; }
+      .app > .main header.top .buttons-group .button .fa {
+        margin: 0;
+        position: relative;
+        bottom: -2px; }
 
 .app > .aside .footer {
   height: 55px;
@@ -5310,16 +5323,17 @@ header.top {
     position: absolute;
     top: 50%;
     left: 30px;
-    margin-top: -8px;
-    font-size: 14px;
+    margin-top: -11px;
+    font-size: 21px;
     -webkit-transition: 0.4s;
-            transition: 0.4s; }
+            transition: 0.4s;
+    color: #aab2bc; }
   .search input {
     display: block;
     border: none;
     background: none;
     height: 55px;
-    padding: 0 55px;
+    padding: 0 60px;
     border-radius: 0;
     -webkit-transition: 0.4s;
             transition: 0.4s; }
