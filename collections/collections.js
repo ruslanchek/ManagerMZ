@@ -1,3 +1,3 @@
 App.collections = {};
 
-App.collections.Bills = new Mongo.Collection('bills');
+App.collections.bills = new Mongo.Collection('bills');

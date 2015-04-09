@@ -5,7 +5,10 @@
                 <span class="title">{{title}}</span>
 			{{else}}
                 <a href="{{pathFor route}}" class="{{isActiveRoute regex=name className='active'}}">
-                    <i class="fa {{icon}}"></i> {{title}}<span class="new border-{{color}}">12</span>
+                    <i class="fa {{icon}}"></i> {{title}}
+                    {{#if getNewItemsCount name}}
+                    	<span class="new border-{{color}}">{{getNewItemsCount name}}</span>
+                    {{/if}}
                 </a>
 			{{/if}}
 		{{/each}}

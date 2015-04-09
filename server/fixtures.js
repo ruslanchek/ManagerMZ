@@ -1,4 +1,4 @@
-if (App.collections.Bills.find().count() === 0) {
+if (App.collections.bills.find().count() === 0) {
     var bills = [
         {
             payed: true,
@@ -87,6 +87,6 @@ if (App.collections.Bills.find().count() === 0) {
     ];
 
     for (var i = bills.length - 1; i >= 0; i--) {
-        App.collections.Bills.insert(bills[i]);
+        App.collections.bills.insert(bills[i]);
     }
 }

@@ -70,6 +70,11 @@ Handlebars.registerHelper('humanizeDateFrom', function(date) {
 });
 
 
-Template.registerHelper("eq", function (a, b) {
+Handlebars.registerHelper("eq", function (a, b) {
 	return (a == b);
+});
+
+
+Handlebars.registerHelper("getNewItemsCount", function (name) {
+	return App.userData.getNewItemsCount(name);
 });

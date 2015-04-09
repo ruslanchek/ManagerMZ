@@ -5222,6 +5222,7 @@ header.top {
 .app > .main header.top {
   background-color: #FFFEFF;
   position: fixed;
+  min-width: 1000px;
   top: 0;
   left: 0;
   padding: 0 110px 0 220px;
@@ -5334,7 +5335,7 @@ header.top {
         margin-left: -44px; }
 
 .app > .aside {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 220px;
@@ -5417,7 +5418,7 @@ header.top {
     margin: 0 0 10px -2px; }
   .section-header .subtitle {
     font-weight: 100;
-    opacity: 0.75; }
+    color: #fff; }
   .section-header .chevron {
     position: absolute;
     height: 200px;
@@ -5429,6 +5430,8 @@ header.top {
     .section-header .chevron .fa {
       font-size: 200px; }
   .section-header.filled {
+    color: #fff; }
+  .section-header a {
     color: #fff; }
 
 .section-actions {

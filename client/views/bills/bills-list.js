@@ -8,3 +8,9 @@ Template.billsItemsViewModeAndSorting.events({
         App.userData.setUserParam('billsViewMode', data.mode);
     }
 });
+
+Template.registerHelper('isBillsSectionMenuSelected', function(mode){
+    if(App.userData.getUserParam('billsViewMode') === mode){
+        return 'active';
+    }
+});

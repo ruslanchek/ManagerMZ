@@ -1,19 +1,11 @@
 <template name="billsList">
-	{{> billsSectionHeader}}
+	{{> billsListSectionHeader}}
 
 	<div class="section-content">
 		{{> billsItemsViewModeAndSorting}}
 
 		<div class="docs-cards">
 			{{#if eq viewMode 1}}
-				<table>
-					{{#each items}}
-						{{> billsItemsTable this}}
-					{{/each}}
-				</table>
-			{{/if}}
-
-			{{#if eq viewMode 2}}
 				{{#masonryContainer columnWidth=175 transitionDuration="0.2s" gutter=25 id="MasonryContainer" }}
 					{{#each items}}
 						{{#masonryElement "MasonryContainer"}}
@@ -22,6 +14,98 @@
 					{{/each}}
 				{{/masonryContainer}}
 			{{/if}}
+
+			{{#if eq viewMode 2}}
+				<div class="table">
+					<table class="rounded bordered striped bordered-rows-h bordered-rows-v"> 
+						<thead>
+							<th>№</th>
+							<th>Дата</th>
+							<th>Сумма</th>
+							<th>Оплачено</th>
+							<th>Срок оплаты</th>
+							<th>Позиции</th>
+							<th>Котрагент</th>
+						</thead>
+						<tbody>
+						{{#each items}}
+							{{> billsItemsTable this}}
+						{{/each}}
+						</tbody>
+					</table>
+				</div>
+			{{/if}}
 		</div>
 	</div>
 </template>
+
+<template name="billsListSectionHeader">
+	<div class="section-header filled bg-cold-dark">
+		<div class="chevron"><i class="fa fa-share"></i></div>
+		<h1 class="title">Выставленные счета</h1>
+		<div class="subtitle">За период&nbsp;с 25 марта&nbsp;по 30 апреля 2015</div>
+		<div class="section-actions">
+			<a href="{{pathFor 'billsCreate'}}" class="button accent"><i class="big fa fa-plus"></i>&nbsp;&nbsp;Создать счет</a>
+			<a href="#" class="button"><i class="fa fa-calendar"></i>&nbsp;&nbsp;Выбрать период</a>
+			<a href="#" class="button"><i class="fa fa-filter"></i>&nbsp;&nbsp;Фильтр</a>
+		</div>
+	</div>
+</template>
+
+<template name="billsItemsViewModeAndSorting">
+	<div class="grid">
+		<div class="col-15">
+			<nav class="section-menu">
+				<a href="#" data-mode="1" class="{{isBillsSectionMenuSelected 1}}">Файлами</a>
+				<a href="#" data-mode="2" class="{{isBillsSectionMenuSelected 2}}">Списком</a>
+				<a href="#" data-mode="3" class="{{isBillsSectionMenuSelected 3}}">Папками</a>
+			</nav>
+		</div>
+		<div class="col-9">
+			<div class="sorting">
+				<div class="title">Сортировка</div>
+				<div class="select">
+					<select id="realm-1" tabindex="3">
+						<option>Недавние</option>
+						<option>Давние</option>
+						<option>А-Я</option>
+						<option>Я-А</option>
+						<option>Большие суммы</option>
+						<option>Меньшие суммы</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="billsItemsTable">
+	<tr>
+		<td><a href="{{pathFor 'billsEdit'}}">Счет №{{title}}</a></td>
+		<td>От {{humanizeDate date}}</td>
+		<td>{{> priceConverted price}}</td>
+		<td>{{payed}}</td>
+		<td>{{> payedWord}}</td>
+		<td>{{pluralize items 'позиция' 'позиции' 'позиций' true}}</td>
+		<td>{{> contragentLink contragent}}</td>
+	</tr>
+</template>
+
+<template name="billsItemsFiles">
+	<div class="item">
+		<div class="subtitle">Счет</div>
+		<div class="title">№{{title}}</div>
+		<div class="date">От {{humanizeDate date}}</div>
+		{{> priceConverted price}} {{> payedWord}}
+		{{pluralize items 'позиция' 'позиции' 'позиций' true}}
+
+		<div class="picture">
+			{{#if payed}}
+			<i class="status active fa fa-check"></i>
+			{{/if}}
+		</div>
+		<div class="link">{{> contragentLink contragent}}</div>
+	</div>
+</template>
+
+
