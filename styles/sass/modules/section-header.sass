@@ -2,13 +2,13 @@
 	padding: 20px 15% 85px $space-section
 	position: relative
 	overflow: hidden
+	background-color: #3293C6
+	color: #fff
 
 	.title
 		margin: 0 0 10px -2px
 
 	.subtitle
-		font-weight: 100
-		color: #fff
 	
 	.chevron
 		position: absolute
@@ -16,7 +16,7 @@
 		width: 200px
 		line-height: 200px
 		color: #fff
-		opacity: .15
+		opacity: .1
 		right: $space-section
 
 		.fa
@@ -43,7 +43,7 @@
 		line-height: 50px
 		float: left
 		border-radius: 0
-		background-color: rgba(255, 255, 255, .15)
+		background-color: #3CA6DF
 		color: #fff
 		margin-right: 2px
 		min-width: 0
@@ -51,8 +51,16 @@
 
 		&:after,
 		&:before
-			border-radius: 0
+			display: none
+
+		&:hover
+			background-color: #3CA6DF + 5
 
 		&.accent
-			background-color: rgba(255, 255, 255, .3)
+			background-color: #3CA6DF + 10
 			font-weight: 600
+
+			&:hover
+				background-color: #3CA6DF + 15
+
+				
