@@ -1,3 +1,3 @@
-Handlebars.registerHelper('searchResults', function() {
-	return App.dynamicData.searchResults;
-});
+//Handlebars.registerHelper('searchResults', function() {
+//	return App.dynamicData.searchResults;
+//});
