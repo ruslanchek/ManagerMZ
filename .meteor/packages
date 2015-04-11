@@ -10,9 +10,9 @@ insecure
 mquandalle:jade
 robodo:masonrify
 iron:router
-dburles:mongo-collection-instances
 momentjs:moment
 numeral:numeral
 mrt:reactive-attributes
 zimme:iron-router-active
-less
+fortawesome:fontawesome
+artisin:stylus-elf

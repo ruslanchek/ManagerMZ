@@ -1,0 +1,101 @@
+aside
+	background #303E4D
+	position fixed
+	top 0
+	left 0
+	width $aside-width
+	height 100vh
+	color #fff
+	
+	header
+		background #2C3849
+		height $header-height
+		line-height $header-height + 2
+
+		a
+			display block
+			height $header-height
+			padding 0 25px 0 62px
+			font-size 18px
+			color #fff
+			text-decoration none
+			position relative
+			font-weight 400
+			transition .1s
+			
+			&:hover
+				background rgba(0, 0, 0, .075)
+			
+			&:after
+				content ''
+				display block
+				background url('/images/logo.svg')
+				width 27px
+				height 20px
+				position absolute
+				top 50%
+				left 25px
+				margin-top -11px
+				
+	.nav-main
+		a
+			height 42px
+			line-height 42px
+			display block
+			color #ACB2B8
+			padding 0 25px
+			transition .1s
+			
+			&:hover
+				background rgba(255, 255, 255, .035)
+				
+	footer
+		background #2C3849
+		height $footer-height
+		position absolute
+		bottom 0
+		left 0
+		width $aside-width
+		
+		.user
+			height $footer-height
+			position relative
+			display block
+			color #fff
+			padding 12px 25px 0 75px
+			text-decoration none
+			
+			.username 
+				overflow hidden
+				display block
+				margin-bottom 1px
+				
+			.online
+				display block
+				margin-bottom .4em
+				font-size 13px
+				
+				&:before
+					display inline-block
+					content ''
+					width 7px
+					height 7px
+					border-radius 6px
+					margin-right: 5px
+					position relative
+					background green
+					box-shadow 0 0 0 1px rgba(255, 255, 255, .75)
+			
+			.avatar
+				top 9px
+				left 25px
+				display block
+				position absolute
+				height $footer-height - 18
+				width $footer-height - 18
+				border-radius 3px
+				
+				img 
+					width 100%
+					display block
+					border-radius 3px
