@@ -2,7 +2,7 @@
 	<nav class="nav-main">
 		{{#each mainMenu}}
 			{{#if header}}
-                <span class="title">{{title}}</span>
+               
 			{{else}}
                 <a href="{{pathFor route}}" class="{{isActiveRoute regex=name className='active'}}">
                     <i class="fa {{icon}}"></i> {{title}}

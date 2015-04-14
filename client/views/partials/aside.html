@@ -1,17 +1,22 @@
 <template name="aside">
-	<aside class="aside">
-		<div class="content">
-			<header class="top">
-				<a href="/" class="logo">Менеджер</a>
-			</header>
+	<aside>
+		<header>
+			<a class="logo" href="/">Менеджер</a>
+		</header>
 
-			<section class="middle">
-				{{> asideNav}}
-			</section>
-		</div>
+		<section>
+			{{> asideNav}}
+		</section>
 
-		<footer class="footer">
-			&copy; 2015 Менеджер
+		<footer>
+			<a href="#" class="user">
+				<span class="avatar">
+					<img src="https://s3.amazonaws.com/uifaces/faces/twitter/whale/128.jpg">
+				</span>
+				<span class="username">ruslanchek</span>
+				<span class="online">online</span>
+			</a>
 		</footer>
 	</aside>
 </template>
+

@@ -1,8 +1,9 @@
 aside
 	background #303E4D
-	position fixed
+	position absolute
 	top 0
 	left 0
+	z-index 2
 	width $aside-width
 	height 100vh
 	color #fff
@@ -10,7 +11,7 @@ aside
 	header
 		background #2C3849
 		height $header-height
-		line-height $header-height + 2
+		line-height $header-height
 
 		a
 			display block
@@ -38,6 +39,10 @@ aside
 				margin-top -11px
 				
 	.nav-main
+		.title 
+			display block
+			padding 0 25px
+
 		a
 			height 42px
 			line-height 42px
@@ -45,9 +50,44 @@ aside
 			color #ACB2B8
 			padding 0 25px
 			transition .1s
+			position relative
+			letter-spacing .05ex
+			
+			i 
+				color #656F7A
+				width 25px
+				display inline-block
+				transition .1s
+				
+			.new
+				position absolute
+				right 25px
+				line-height 18px
+				height 18px
+				display inline-block
+				border-radius 3px
+				padding 0 5px
+				color #fff
+				font-size 11px
+				top 50%
+				margin-top -9px
+				font-weight 600
+				transition .1s
 			
 			&:hover
-				background rgba(255, 255, 255, .035)
+				background #303E4D + 10
+				color #ACB2B8 + 25
+				
+				i
+					color #656F7A + 25
+				
+			&.active
+				color #fff
+				background #303E4D + 25
+				
+				i
+					color #fff
+
 				
 	footer
 		background #2C3849
