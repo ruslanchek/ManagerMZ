@@ -1,11 +1,14 @@
 <template name="layout">
-	{{>header}}
+	<div class="app">
+		{{>header}}
 
-	<div class="limiter">
-		{{>aside}}
+		<div class="limiter">
+			{{>aside}}
 
-		<main class="main">
-			{{>yield}}
-		</main>
+			<main class="main">
+				{{>breadcrumbs}}
+				{{>yield}}
+			</main>
+		</div>
 	</div>
 </template>
