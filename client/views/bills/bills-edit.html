@@ -4,7 +4,13 @@
 
 <template name="billsEditSectionHeader">
 	<div class="section-header">
-		<h1 class="title">Редактирование счета</h1>
+		<h1 class="title">
+			<span>Счет</span> 
+			<a class="link-dash" href="#">№{{item.title}}</a> 
+			<span>от</span> 
+			<a class="link-dash" href="#">{{humanizeDate item.date}}</a>
+		</h1>
+
 		<div class="subtitle">Для компании <a href="#">ООО &laquo;Кинетикс&raquo;</a></div>
 
 		<div class="section-actions">

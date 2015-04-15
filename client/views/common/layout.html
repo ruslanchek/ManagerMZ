@@ -1,8 +1,10 @@
 <template name="layout">
-	<div class="app">
+	{{>header}}
+
+	<div class="limiter">
 		{{>aside}}
 
-		<main>
+		<main class="main">
 			{{>yield}}
 		</main>
 	</div>
