@@ -1,7 +1,7 @@
 .main
-	float right
-	width $page-width - $aside-width
-	padding 40px
+	col(3/4, gutter: 4)
+	
+	padding 40px 0
 	box-sizing border-box
 
 h1
@@ -11,19 +11,16 @@ h1
 	
 	span
 		color $color-gray-light
-		
 
 .heading
 	margin 0 0 40px 0
 	
 .section-header
 	.left 
-		width 70%
-		float left
+		col(3/4, gutter: 4)
 		
 	.right
-		width 30%
-		float right
+		col(1/4, gutter: 4)
 		
 .section-actions
 	text-align right
