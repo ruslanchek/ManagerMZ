@@ -1,0 +1,15 @@
+template(name='billsCreate')
+	+billsCreateSectionHeader
+
+template(name='billsCreateSectionHeader')
+	.section-header
+		h1.title Создание счета
+
+	.subtitle
+		|Для компании
+		a(href='#') ООО &laquo;Кинетикс&raquo;
+	
+	.section-actions
+		a.button(href="{{pathFor 'billsList'}}")
+			i.fa.fa-chevron-left
+			| &nbsp;&nbsp;Все счета

@@ -1,0 +1,67 @@
+template(name='billsList')
+	+billsListSectionHeader
+
+	.section-content
+		+billsItemsViewModeAndSorting
+
+	.docs-cards
+		if eq viewMode 1
+			+billsItemsTable items
+
+		if eq viewMode 2
+			p 12
+
+		if eq viewMode 3
+			p 13
+
+template(name='billsListSectionHeader')
+	.section-header
+		h1.title Выставленные счета
+		.subtitle За период с 25 марта по 30 апреля 2015
+
+		.section-actions
+			a.button.accent(href="{{pathFor 'billsCreate'}}")
+				i.big.fa.fa-plus
+				|Создать счет
+
+			a.button(href='#')
+				i.fa.fa-calendar
+				|Выбрать период
+
+			a.button(href='#')
+				i.fa.fa-filter
+				|Фильтр
+
+
+template(name='billsItemsViewModeAndSorting')
+	nav.section-menu
+		a(href='#', data-mode='1', class='{{isBillsSectionMenuSelected 1}}') Файлами
+		a(href='#', data-mode='2', class='{{isBillsSectionMenuSelected 2}}') Списком
+		a(href='#', data-mode='3', class='{{isBillsSectionMenuSelected 3}}') Папками
+
+template(name='billsItemsTable')
+	table
+		thead
+			th №
+			th Дата
+			th Сумма
+			th Оплачено
+			th Срок оплаты
+			th Позиции
+			th Котрагент
+		tbody
+			each this
+				tr
+					td: a(href="{{pathFor 'billsEdit'}}") Счет №{{title}}
+					td От {{humanizeDate date}}
+					td
+						+priceConverted price
+					td {{payed}}
+					td
+						+payedWord
+					td {{pluralize positions 'позиция' 'позиции' 'позиций' true}}
+					td
+						+contragentLink contragent
+
+template(name='billsItemsFile')
+	
