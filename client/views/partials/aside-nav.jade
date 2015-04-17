@@ -1,0 +1,4 @@
+template(name='asideNav')
+	nav.nav-main
+		each mainMenu
+			a(href='{{pathFor route}}', class="{{isActiveRoute regex=name className='active'}}") {{title}}
