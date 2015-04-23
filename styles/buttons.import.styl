@@ -1,8 +1,65 @@
 .button
 	border 1px solid $ui-clickable-border-color
 	border-radius 3px
+	font-family 'Open Sans', sans-serif
+	font-size: 13px
+	height 28px
+	line-height 28px
+	padding 0 8px
+	display inline-block
+	color $color-text
+	background none
+	cursor pointer
+	
+	&:hover
+		border-color $ui-clickable-border-color - 10
+	
+	.fa 
+		color $color-text + 20
+		margin-right 5px
+		font-size 14px
 
 	&.small
 		height $ui-clickable-small-height
 		
+	&.active
+		background #eee
+	
+	&.red
+		color #FF6666
+		border-color #FFB4B8
 		
+		.fa 
+			color #FF6666
+
+	&.green
+		color #55D58F - 20
+		border-color #55D58F
+		
+		&.active
+			background #F2FFF8
+		
+		.fa
+			color #55D58F - 20
+		
+select
+	&.button
+		appearance none
+		height 30px
+		
+.button-group
+	display inline-block
+	
+	.button
+		margin-left -5px
+		border-radius 0
+		
+		&:first-child
+			margin-left 0 !important
+			border-radius 3px 0 0 3px
+		
+		&:last-child
+			border-radius 0 3px 3px 0
+			
+	
+			

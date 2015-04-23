@@ -78,3 +78,9 @@ Handlebars.registerHelper("eq", function (a, b) {
 Handlebars.registerHelper("getNewItemsCount", function (name) {
 	return App.userData.getNewItemsCount(name);
 });
+
+Template.registerHelper('isActiveClass', function(val){
+    if(val){
+        return 'active';
+    }
+});

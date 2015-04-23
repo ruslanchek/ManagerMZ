@@ -11,15 +11,37 @@ template(name='billsEditSectionHeader')
 				a.link-dash(href='#') {{humanizeDate item.date}}
 
 			.buttons
-				select.select.small
+				select.button
 					option(value='1') ООО «Кинетикс»
 					option(value='2') ООО «Кинетикс»
 					option(value='3') ООО «Кинетикс»
 					option(value='4') ООО «Кинетикс»
 					option(value='5') ООО «Кинетикс»
 					option(value='6') ООО «Кинетикс»
-		.right
-			.section-actions
-				a(href='#'): i.fa.fa-paper-plane-o
-				a(href='#'): i.fa.fa-print
-				a(href='#'): i.fa.fa-file-pdf-o
+
+				.gutter
+
+				a.button.green(href='#', class="{{isActiveClass item.payed}}")
+					i.fa.fa-bullseye
+					|Оплачен
+
+				.gutter
+
+				.button-group
+					a.button(href='#')
+						i.fa.fa-paper-plane-o 
+						|Отправить
+
+					a.button(href='#')
+						i.fa.fa-print
+						|Напечатать
+
+					a.button(href='#')
+						i.fa.fa-file-pdf-o
+						|Скачать PDF
+
+				.gutter
+
+				a.button.red(href='#')
+					i.fa.fa-times
+					|Удалить
