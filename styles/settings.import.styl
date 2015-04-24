@@ -13,19 +13,16 @@ body
 	
 a
 	text-decoration none
-	color $color-gray-dark
-	
-	&:link
-		color $color-gray-dark
+	color $color-link
 		
 	&:visited 
-		color $color-gray-dark
+		color $color-link
 
 	&:hover
-		color $color-gray-dark + 30
+		color $color-link-hover
 	
 	&:active
-		color $color-gray-dark + 30
+		color $color-link-hover
 		
 	&.link-dash
 		position relative
@@ -43,4 +40,4 @@ a
 			
 		&:hover
 			&:before
-				border-color $color-gray-dark + 30
+				border-color $color-link-hover

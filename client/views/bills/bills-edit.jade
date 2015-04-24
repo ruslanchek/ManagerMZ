@@ -2,6 +2,13 @@ template(name='billsEdit')
 	+billsEditSectionHeader
 
 template(name='billsEditSectionHeader')
+	.breadcrumbs
+		a(href='/') Менеджер
+		span: i.fa.fa-chevron-right
+		a(href='/bills') Счета
+		span: i.fa.fa-chevron-right
+		a.active Счет №{{item.title}}
+
 	.section-header
 		.left
 			h1.title
@@ -21,23 +28,23 @@ template(name='billsEditSectionHeader')
 
 				.gutter
 
-				a.button.green(href='#', class="{{isActiveClass item.payed}}")
-					i.fa.fa-bullseye
+				a.button.payed(href='#', class="{{isActiveClass item.payed}}")
+					if item.payed
+						i.fa.fa-check-circle-o
+					else
+						i.fa.fa-circle-o
 					|Оплачен
 
 				.gutter
 
 				.button-group
 					a.button(href='#')
-						i.fa.fa-paper-plane-o 
 						|Отправить
 
 					a.button(href='#')
-						i.fa.fa-print
 						|Напечатать
 
 					a.button(href='#')
-						i.fa.fa-file-pdf-o
 						|Скачать PDF
 
 				.gutter

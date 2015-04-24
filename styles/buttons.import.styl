@@ -1,5 +1,5 @@
 .button
-	border 1px solid $ui-clickable-border-color
+	border 1px solid $color-gray-border
 	border-radius 3px
 	font-family 'Open Sans', sans-serif
 	font-size: 13px
@@ -7,40 +7,50 @@
 	line-height 28px
 	padding 0 8px
 	display inline-block
-	color $color-text
+	color #666
 	background none
 	cursor pointer
 	
-	&:hover
-		border-color $ui-clickable-border-color - 10
+	&:link
+		color #666
 	
-	.fa 
-		color $color-text + 20
+	&:hover
+		border-color $color-gray-border-hover
+	
+	.fa
 		margin-right 5px
 		font-size 14px
-
-	&.small
-		height $ui-clickable-small-height
 		
 	&.active
-		background #eee
+		background #FFF2B3
+		border-color #FFBF00
 	
 	&.red
-		color #FF6666
-		border-color #FFB4B8
+		color $color-red-text
+		border-color $color-red-border
 		
-		.fa 
-			color #FF6666
+		&:hover
+			border-color $color-red-border-hover
 
 	&.green
-		color #55D58F - 20
-		border-color #55D58F
+		color $color-green-text
+		border-color $color-green-border
+		
+		&:hover
+			border-color $color-green-border-hover
 		
 		&.active
-			background #F2FFF8
+			background $color-green-light
 		
 		.fa
-			color #55D58F - 20
+			color $color-green-text
+			
+	&.payed		
+		.fa
+			color $color-gray-dark
+
+		&.active
+			@extend .button.green
 		
 select
 	&.button
@@ -53,6 +63,7 @@ select
 	.button
 		margin-left -5px
 		border-radius 0
+		position relative
 		
 		&:first-child
 			margin-left 0 !important
@@ -60,6 +71,9 @@ select
 		
 		&:last-child
 			border-radius 0 3px 3px 0
+			
+		&:hover
+			z-index 2
 			
 	
 			
